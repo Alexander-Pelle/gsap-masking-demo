@@ -1,26 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
 @import "tailwindcss";
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  
+ }
+
+main {
+  min-height: 100vh;
+}
+
+.mask {
+  height: 100vh;
+  width: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  mix-blend-mode: screen;
+}
+
+h2 {
+  font-size: 80px;
+  font-weight: 900;
+  font-family: serif;
+}
+
+video {
+  position: fixed;
+  
+  z-index: -1;
+  inset: 0;
+  
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
